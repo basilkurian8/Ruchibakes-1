@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "Breads",
+        "Price": 100,
+        "path": "../../assets/images/1.jpg" 
+    },
+    {
+        "Name": "Cookies",
+        "Price": 200,
+        "path": "../../assets/images/2.jpg" 
+    },
+    {
+        "Name": "Desserts",
+        "Price": 300,
+        "path": "../../assets/images/3.jpg" 
+    },
+    {
+        "Name": "Pizza",
+        "Price": 400,
+        "path": "../../assets/images/4.jpg" 
+    },
+    {
+        "Name": "Cakes",
+        "Price": 500,
+        "path": "../../assets/images/5.jpg" 
+    },
+    {
+        "Name": "Sweets",
+        "Price": 600,
+        "path": "../../assets/images/6.jpg" 
+    }
+]
