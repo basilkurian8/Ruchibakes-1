@@ -15,12 +15,10 @@ export class IngredientsComponent implements OnInit {
       console.log(this.ingdata)
      
       })
-
-
    }
 
   ngOnInit(): void {
-    // console.log("called")
+ 
   }
 
 }

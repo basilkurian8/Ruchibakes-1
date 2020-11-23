@@ -8,42 +8,18 @@
 </head>
 
 <body>
-
-
-
-    <div  class="card" style="width: 100%; padding-left: 10%; padding-right: 10%; background: rgb(224, 222, 222)">
-
-
-        <div *ngFor='let ing of ingdata' class="card" style="width: 100%;margin-top: 10%; margin-bottom: 5%;color: darkmagenta;">
+    <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%; background: rgb(224, 222, 222)">
+        <div *ngFor='let ing of ingdata' class="card"
+            style="width: 100%;margin-top: 10%; color: darkmagenta;">
             <img class="card-img-top" src="{{''}}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title"><b>{{ing.title}}</b></h5>
                 <p class="card-text">{{ing.description}} </p>
-
             </div>
         </div>
-
-
-     
-
-
-
-    
-
-
-
-     
-
-
-     
-
-
-
-       
-
-       
-
     </div>
+
+    <br><br><br>
 
 </body>
 
