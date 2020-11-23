@@ -1,37 +1,38 @@
 
-<div class="about-section" style="background-color: #dcdcdc;">
+<div class="about-section" style="background-color: #dcdcdc;margin-top: 80px;">
     <h1 >Write Us a Letter</h1>
   </div>
 
   <section class="about-section"> 
       
     <div class="row">
-        <div class="col-sm-6" style="text-align: left;">
-            <h2>Address1</h2>
-            <p>Address2</p>
+        <div *ngFor='let cnt of cntdata' class="col-sm-6" style="text-align: left;">
+            <h2>Ruchi Bakes</h2>
+            <p>{{cnt.address1}}</p>
+            <p>{{cnt.address2}}</p>
             <div>
                 <br>
             </div>
 
-            <p>Contact No : </p>
+            <p>Contact No : {{cnt.contact}} </p>
             
         </div>
         <div class="col-sm-6">
-            <form action="">
+            <form  action="" (ngSubmit)='addData()' >
             <div>
-            <input type="text" id="name" placeholder="Name" size="40" required>
+            <input type="text"  name="name" [(ngModel)]='data.name' placeholder="Name" size="40" required pattern="[a-zA-z.]+">
         </div>
         <div><br></div>
         <div>
-            <input type="email" id="email" placeholder="Email " size="40" required>
+            <input type="email" name="email"   [(ngModel)]='data.email' placeholder="Email " size="40" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
         </div>
         <div><br></div>
         <div>
-            <textarea name="message" id="message" id="" placeholder="Message" cols="49" rows="10" required></textarea>
+            <textarea name="message" name="message"  [(ngModel)]='data.message'  placeholder="Message" cols="49" rows="10" required pattern="[a-zA-z.]+"></textarea>
         </div>
         <div><br></div>
         <div>
-            <button class="btn">Send</button>
+            <button type="submit"   class="btn">Send</button>
         </div>
     </form>
            
