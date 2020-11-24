@@ -1,6 +1,38 @@
 h5{
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 200%;
-    color: rgb(22, 245, 134);
+    font-size: 220%;
+    color: tomato;
 }
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  .row{
+    text-align: center;
+    
+  }
+  
+  .column {
+    float: left;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 50%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+  }

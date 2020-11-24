@@ -2,25 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%; background: rgb(224, 222, 222)">
-        <div *ngFor='let ing of ingdata' class="card"
-            style="width: 100%;margin-top: 8%; color: darkmagenta;">
-            <img class="card-img-top" src="{{''}}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"><b>{{ing.title}}</b></h5>
-                <p class="card-text">{{ing.description}} </p>
-            </div>
-        </div>
+  <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%; background: white; ">
+    <div *ngFor="let ing of ingdata; let i = index">
+      <div *ngIf="i % 2 == 0 else elseBlock">
+        <div class="row">
+          <div class="column" style="padding-right: 5%;">
+            <img src="{{''}}" alt="Image Loading Failed" style="width:100%">
+          </div>
+          <div class="column" style="padding-left: 5%; ">
+            <br>
+            <h5>{{ing.title}}</h5>
+            <br>
+            {{ing.description}}
+          </div>
+        </div><br><br>
+      </div>
+      <ng-template #elseBlock>
+        <div class="row">
+          <div class="column" style="padding-right: 5%;">
+            <br>
+            <h5>{{ing.title}}</h5>
+            <br>
+            {{ing.description}}
+          </div>
+          <div class="column" style="padding-left: 5%;">
+            <img src="{{''}}" alt="Image Loading Failed" style="width:100%">
+          </div>
+        </div><br><br>
+      </ng-template>
     </div>
-
-    <br><br><br>
-
+  </div>
+  <br><br><br>
 </body>
 
 </html>

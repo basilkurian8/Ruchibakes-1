@@ -1,5 +1,5 @@
 .navbar-light .navbar-brand:hover {
-    color: red;
+    color: tomato;
     transform: scale(1.2);
 }
 .navbar-light .navbar-brand {
@@ -24,7 +24,7 @@
     font-weight: bold;
 } 
  .navbar-light .navbar-nav .nav-link:hover {
-    color: rgb(233, 21, 109);
+    color: tomato;
     transform: scale(1.2);
 }
 #icon{
