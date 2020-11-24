@@ -8,7 +8,11 @@
 </head>
 
 <body>
-  <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%; background: white; ">
+  <div class="about-section"
+    style="background-color:#dcdcdc;margin-top: 50px;padding: 50px;text-align: center;color: black;">
+    <h1 style=" font-family: 'Poppins', sans-serif;font-weight: bold;">Ingredients</h1>
+  </div>
+  <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%;padding-top: 5%; background: white; ">
     <div *ngFor="let ing of ingdata; let i = index">
       <div *ngIf="i % 2 == 0 else elseBlock">
         <div class="row">
