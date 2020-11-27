@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Ingredients</title>
 </head>
 
 <body>
@@ -12,6 +12,27 @@
     style="background-color:#dcdcdc;margin-top: 50px;padding: 50px;text-align: center;color: black;">
     <h1 style=" font-family: 'Poppins', sans-serif;font-weight: bold;">Ingredients</h1>
   </div>
+
+
+<div class="mobile">
+  <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%;padding-top: 5%; background: white; ">
+    <div *ngFor="let ing of ingdata; ">
+        <div class="row">
+          <div class="column" style="padding-right: 5%;">
+            <img src="{{''}}" alt="Image Loading Failed" style="width:100%">
+          </div>
+          <div class="column" style="padding-left: 5%; ">
+            <br>
+            <h5>{{ing.title}}</h5>
+            <br>
+            {{ing.description}}
+          </div>
+        </div><br><br>
+    </div>
+  </div>
+</div>
+
+<div class="otherview">
   <div class="card" style="width: 100%; padding-left: 10%; padding-right: 10%;padding-top: 5%; background: white; ">
     <div *ngFor="let ing of ingdata; let i = index">
       <div *ngIf="i % 2 == 0 else elseBlock">
@@ -42,6 +63,7 @@
       </ng-template>
     </div>
   </div>
+</div>
   <br><br><br>
 </body>
 
